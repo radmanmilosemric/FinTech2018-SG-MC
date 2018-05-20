@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:EasyPayDemo"
         mc:Ignorable="d"
         Title="EasyPay" Height="450" Width="800" Background="Gray" Loaded="Window_Loaded">
+    <Viewbox HorizontalAlignment="Center" Stretch="Uniform">
     <GroupBox HorizontalAlignment="Center" Background="White">
         <Grid Width="310">
 
@@ -49,4 +50,5 @@
             <Label Content="CVC\CVV" HorizontalAlignment="Left" Margin="23,261,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         </Grid>
     </GroupBox>
+    </Viewbox>
 </Window>

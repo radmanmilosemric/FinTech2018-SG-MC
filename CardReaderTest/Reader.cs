@@ -10,6 +10,10 @@ namespace CardReaderTest
     {
         public static Data GetData()
         {
+            try
+            {
+
+           
             var contextFactory = ContextFactory.Instance;
             using (var ctx = contextFactory.Establish(SCardScope.System))
             {
@@ -63,9 +67,18 @@ namespace CardReaderTest
                     {
                         var data = response.GetData();
                         Console.WriteLine("Challenge: {0}", BitConverter.ToString(data));
+
+                            var uid = BitConverter.ToString(data);
+
                         return Data.GetData().FirstOrDefault(o=>o.Uid == BitConverter.ToString(data));
                     }
                 }
+            }
+            }
+            catch (Exception)
+            {
+
+                return null;
             }
         }
 

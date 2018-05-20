@@ -5,46 +5,48 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EasyPayDemo"
         mc:Ignorable="d"
-        Title="EasyPay" Height="450" Width="800" Background="Gray">
-    <GroupBox HorizontalAlignment="Center" Background="White">
-    <Grid Width="310">
+        Title="EasyPay" Height="450" Width="800" Background="Gray" Loaded="Window_Loaded">
+    <Viewbox HorizontalAlignment="Center" Stretch="Uniform">
+        <GroupBox Background="White" Height="419" Width="322">
+            <Grid Width="310">
 
-        <TextBox x:Name="txtCardHolderName" HorizontalAlignment="Left" Height="23" Margin="23,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="265"/>
-        <Label x:Name="lblCardHolder" Content="Cardholder Name" HorizontalAlignment="Left" Margin="23,93,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.964,-0.002" FontWeight="Bold"/>
-        <Label x:Name="lblCardNumber" Content="Card Number" HorizontalAlignment="Left" Margin="23,147,0,0" VerticalAlignment="Top" RenderTransformOrigin="3.629,1.655" FontWeight="Bold"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="23,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="265"/>
-        <Label x:Name="lblCardExpiration" Content="Card Expiration" HorizontalAlignment="Left" Margin="23,200,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <ComboBox x:Name="cmbxExpiryMonth" HorizontalAlignment="Left" Margin="23,226,0,0" VerticalAlignment="Top" Width="120"  SelectedIndex="0" RenderTransformOrigin="0.531,-0.844">
-            <ListBoxItem Content="01"/>
-            <ListBoxItem Content="02"/>
-            <ListBoxItem Content="03"/>
-            <ListBoxItem Content="04"/>
-            <ListBoxItem Content="05"/>
-            <ListBoxItem Content="06"/>
-            <ListBoxItem Content="07"/>
-            <ListBoxItem Content="08"/>
-            <ListBoxItem Content="09"/>
-            <ListBoxItem Content="10"/>
-            <ListBoxItem Content="11"/>
-            <ListBoxItem Content="12"/>
-        </ComboBox>
-        <ComboBox x:Name="cmbxExpiryYear" HorizontalAlignment="Left" Margin="168,226,0,0" VerticalAlignment="Top" Width="120" SelectedIndex="0">
-            <ListBoxItem Content="2018"/>
-            <ListBoxItem Content="2019"/>
-            <ListBoxItem Content="2020"/>
-            <ListBoxItem Content="2021"/>
-            <ListBoxItem Content="2022"/>
-            <ListBoxItem Content="2023"/>
-            <ListBoxItem Content="2024"/>
-            <ListBoxItem Content="2025"/>
-        </ComboBox>
-        <!--<Line
+                <TextBox x:Name="txtCardHolderName" HorizontalAlignment="Left" Height="23" Margin="23,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="265"/>
+                <Label x:Name="lblCardHolder" Content="Cardholder Name" HorizontalAlignment="Left" Margin="23,93,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.964,-0.002" FontWeight="Bold"/>
+                <Label x:Name="lblCardNumber" Content="Card Number" HorizontalAlignment="Left" Margin="23,147,0,0" VerticalAlignment="Top" RenderTransformOrigin="3.629,1.655" FontWeight="Bold"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="23,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="265"/>
+                <Label x:Name="lblCardExpiration" Content="Card Expiration" HorizontalAlignment="Left" Margin="23,200,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                <ComboBox x:Name="cmbxExpiryMonth" HorizontalAlignment="Left" Margin="23,226,0,0" VerticalAlignment="Top" Width="120"  SelectedIndex="0" RenderTransformOrigin="0.531,-0.844">
+                    <ListBoxItem Content="01"/>
+                    <ListBoxItem Content="02"/>
+                    <ListBoxItem Content="03"/>
+                    <ListBoxItem Content="04"/>
+                    <ListBoxItem Content="05"/>
+                    <ListBoxItem Content="06"/>
+                    <ListBoxItem Content="07"/>
+                    <ListBoxItem Content="08"/>
+                    <ListBoxItem Content="09"/>
+                    <ListBoxItem Content="10"/>
+                    <ListBoxItem Content="11"/>
+                    <ListBoxItem Content="12"/>
+                </ComboBox>
+                <ComboBox x:Name="cmbxExpiryYear" HorizontalAlignment="Left" Margin="168,226,0,0" VerticalAlignment="Top" Width="120" SelectedIndex="0">
+                    <ListBoxItem Content="2018"/>
+                    <ListBoxItem Content="2019"/>
+                    <ListBoxItem Content="2020"/>
+                    <ListBoxItem Content="2021"/>
+                    <ListBoxItem Content="2022"/>
+                    <ListBoxItem Content="2023"/>
+                    <ListBoxItem Content="2024"/>
+                    <ListBoxItem Content="2025"/>
+                </ComboBox>
+                <!--<Line
     X1="63" Y1="70"
     X2="330" Y2="70"
     Stroke="Black"
     StrokeThickness="1"/>-->
-            <Image HorizontalAlignment="Left" Height="40" Margin="23,24,0,0" VerticalAlignment="Top" Width="265" Source="/images/Visa-MasterCard-American-express.jpeg"/>
-            <Button Content="Verify" HorizontalAlignment="Left" Margin="213,272,0,0" VerticalAlignment="Top" Width="75"/>
-    </Grid>
-    </GroupBox>
+                <Image HorizontalAlignment="Left" Height="40" Margin="23,24,0,0" VerticalAlignment="Top" Width="265" Source="/images/Visa-MasterCard-American-express.jpeg"/>
+                <Button Content="Verify" HorizontalAlignment="Left" Margin="213,272,0,0" VerticalAlignment="Top" Width="75"/>
+            </Grid>
+        </GroupBox>
+    </Viewbox>
 </Window>
