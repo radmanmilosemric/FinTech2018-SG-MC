@@ -59,5 +59,11 @@ namespace EasyPayDemo
                 txtCardHolderName.Text = data.CardHolder;
             }
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var cv = new ConnectWithFaceRecognition.CameraView();
+            var res = cv.ShowDialog();
+        }
     }
 }
