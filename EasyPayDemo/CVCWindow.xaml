@@ -43,7 +43,7 @@
     X2="330" Y2="70"
     Stroke="Black"
     StrokeThickness="1"/>-->
-            <Image HorizontalAlignment="Left" Height="40" Margin="23,24,0,0" VerticalAlignment="Top" Width="265" Source="C:\Users\mildam\Desktop\Visa-MasterCard-American-express.jpeg"/>
+            <Image HorizontalAlignment="Left" Height="40" Margin="23,24,0,0" VerticalAlignment="Top" Width="265" Source="/images/Visa-MasterCard-American-express.jpeg"/>
 
             <TextBox HorizontalAlignment="Left" Height="23" Margin="23,291,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
             <Label Content="CVC\CVV" HorizontalAlignment="Left" Margin="23,261,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
