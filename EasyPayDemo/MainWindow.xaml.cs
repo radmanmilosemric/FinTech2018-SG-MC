@@ -57,7 +57,11 @@ namespace EasyPayDemo
             {
                 currentData = data;
                 txtCardHolderName.Text = data.CardHolder;
+                txtCardNumber.Text = data.CardNumber;
+                cmbxExpiryMonth.SelectedValue = data.ExpMonth.ToString();
+                cmbxExpiryYear.SelectedValue = data.ExpYear.ToString();
             }
         }
+        
     }
 }

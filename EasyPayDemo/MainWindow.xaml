@@ -13,7 +13,7 @@
                 <TextBox x:Name="txtCardHolderName" HorizontalAlignment="Left" Height="23" Margin="23,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="265"/>
                 <Label x:Name="lblCardHolder" Content="Cardholder Name" HorizontalAlignment="Left" Margin="23,93,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.964,-0.002" FontWeight="Bold"/>
                 <Label x:Name="lblCardNumber" Content="Card Number" HorizontalAlignment="Left" Margin="23,147,0,0" VerticalAlignment="Top" RenderTransformOrigin="3.629,1.655" FontWeight="Bold"/>
-                <TextBox HorizontalAlignment="Left" Height="23" Margin="23,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="265"/>
+                <TextBox x:Name="txtCardNumber" HorizontalAlignment="Left" Height="23" Margin="23,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="265"/>
                 <Label x:Name="lblCardExpiration" Content="Card Expiration" HorizontalAlignment="Left" Margin="23,200,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
                 <ComboBox x:Name="cmbxExpiryMonth" HorizontalAlignment="Left" Margin="23,226,0,0" VerticalAlignment="Top" Width="120"  SelectedIndex="0" RenderTransformOrigin="0.531,-0.844">
                     <ListBoxItem Content="01"/>
