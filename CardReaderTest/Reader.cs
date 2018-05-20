@@ -8,7 +8,7 @@ namespace CardReaderTest
 {
     public class Reader
     {
-        public Data GetData()
+        public static Data GetData()
         {
             var contextFactory = ContextFactory.Instance;
             using (var ctx = contextFactory.Establish(SCardScope.System))
@@ -17,7 +17,7 @@ namespace CardReaderTest
                 if (NoReaderFound(readerNames))
                 {
                     Console.WriteLine("You need at least one reader in order to run this example.");
-                    Console.ReadKey();
+                    //Console.ReadKey();
                     return null;
                 }
 
@@ -88,7 +88,7 @@ namespace CardReaderTest
             }
 
             Console.WriteLine("An invalid number has been entered.");
-            Console.ReadKey();
+           // Console.ReadKey();
             return null;
         }
 

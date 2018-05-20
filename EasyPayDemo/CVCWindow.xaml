@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EasyPayDemo"
         mc:Ignorable="d"
-        Title="EasyPay" Height="450" Width="800" Background="Gray">
+        Title="EasyPay" Height="450" Width="800" Background="Gray" Loaded="Window_Loaded">
     <GroupBox HorizontalAlignment="Center" Background="White">
         <Grid Width="310">
 
