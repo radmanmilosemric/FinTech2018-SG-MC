@@ -8,7 +8,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		readme.txt = readme.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyPayDemo", "..\EasyPayDemo\EasyPayDemo\EasyPayDemo.csproj", "{B6FE1FDB-981E-42C0-A692-FB5F489A38A7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyPayDemo", "EasyPayDemo\EasyPayDemo.csproj", "{B6FE1FDB-981E-42C0-A692-FB5F489A38A7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
