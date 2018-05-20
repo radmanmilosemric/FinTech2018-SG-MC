@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EasyPayDemo"
         mc:Ignorable="d"
-        Title="EasyPay" Height="450" Width="800" Background="Gray" Loaded="Window_Loaded">
+        Title="EasyPay" Height="450" Width="800" Background="Gray" Loaded="Window_Loaded" WindowState="Maximized">
     <Viewbox HorizontalAlignment="Center" Stretch="Uniform">
     <GroupBox HorizontalAlignment="Center" Background="White">
         <Grid Width="310">
@@ -48,7 +48,8 @@
 
             <TextBox HorizontalAlignment="Left" Height="23" Margin="23,291,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
             <Label Content="CVC\CVV" HorizontalAlignment="Left" Margin="23,261,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        </Grid>
+                <Button Content="PAY" HorizontalAlignment="Left" Margin="168,291,0,0" VerticalAlignment="Top" Width="120" Height="24" Click="Button_Click"/>
+            </Grid>
     </GroupBox>
     </Viewbox>
 </Window>

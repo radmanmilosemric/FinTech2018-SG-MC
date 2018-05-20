@@ -53,20 +53,32 @@ namespace EasyPayDemo
 
         private void backgroundWorker1_ProgressChanged(object sender, System.ComponentModel.ProgressChangedEventArgs e)
         {
-            if (data != currentData && data != null)
+            if (data != null && ((currentData == null) || (data.Uid != currentData.Uid)))
             {
+                lblVer.Content = "";
                 currentData = data;
                 txtCardHolderName.Text = data.CardHolder;
                 txtCardNumber.Text = data.CardNumber;
-                cmbxExpiryMonth.SelectedValue = data.ExpMonth.ToString();
-                cmbxExpiryYear.SelectedValue = data.ExpYear.ToString();
+                cmbxExpiryMonth.Text = "0" + data.ExpMonth.ToString();
+                cmbxExpiryYear.Text = data.ExpYear.ToString();
             }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var cv = new ConnectWithFaceRecognition.CameraView();
+            if (currentData == null) return;
+            var cv = new ConnectWithFaceRecognition.CameraView(currentData.Uid);
             var res = cv.ShowDialog();
+            if(cv.IsVerified)
+            {
+                lblVer.Content = "Verified";
+                lblVer.Foreground = Brushes.Green;
+            }
+            else
+            {
+                lblVer.Content = "Not Verified";
+                lblVer.Foreground = Brushes.Red;
+            }
         }
     }
 }

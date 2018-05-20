@@ -22,25 +22,54 @@ namespace ConnectWithFaceRecognition
     /// </summary>
     public partial class CameraView : Window
     {
-        public CameraView()
+        public string card;
+        public bool IsValid;
+        DispatcherTimer timer;
+
+        public bool IsVerified;
+
+        public CameraView(string card)
         {
+            this.card = card;
             InitializeComponent();
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop();
-            FaceRec fr = new FaceRec("5574-8911-0383-2181");
+            FaceRec fr = new FaceRec(card);
             // fr.Dock = System.Windows.Forms.DockStyle.Fill;
             FaceRecognition.Child = fr;
 
-            var timer = new DispatcherTimer
+            timer = new DispatcherTimer
                   (
                   TimeSpan.FromMilliseconds(50),
                   DispatcherPriority.ApplicationIdle,// Or DispatcherPriority.SystemIdle
-                  (s, r) => fr.FrameGrabber(null, null),
+                  (s, r) => Work(fr),
                   Application.Current.Dispatcher
                   );
+
+
+        }
+
+        private void Work(FaceRec fr)
+        {
+            fr.FrameGrabber(null, null);
+
+            if(fr.Verification == "Verified")
+            {
+                IsVerified = true;
+                Close();
+            }
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if(timer != null)
+            {
+                timer.Stop();
+                timer = null;
+            }
         }
     }
 }
